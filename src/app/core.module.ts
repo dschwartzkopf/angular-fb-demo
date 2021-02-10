@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core';
+
+/* START MY SERVICES IMPORTS */
+// Do not edit this comment content, it will be overwritten in next Skaffolder generation
+import { UserService } from './services/user.service';
+import { CustomerService } from './services/customer.service';
+import { PaymentService } from './services/payment.service';
+import { PriceService } from './services/price.service';
+import { ProductService } from './services/product.service';
+import { SubscriptionService } from './services/subscription.service';
+
+/* END MY SERVICES IMPORTS */
+
+import { AuthGuard } from './security/auth.guard';
+import { AuthenticationService } from './security/authentication.service';
+
+@NgModule({
+  imports: [],
+  providers: [
+    /* START PROVIDERS */
+// Do not edit this comment content, it will be overwritten in next Skaffolder generation
+    UserService,
+    CustomerService,
+    PaymentService,
+    PriceService,
+    ProductService,
+    SubscriptionService,
+ /* END PROVIDERS */
+
+    // SECURITY
+    AuthGuard,
+    AuthenticationService,
+  ],
+  exports: []
+})
+export class CoreModule {
+}
